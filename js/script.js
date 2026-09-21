@@ -48,21 +48,28 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 
-    /* ===== 3. Alternância de modo claro/escuro (com preferência salva) ===== */
+    /* ===== 3. Alternância de modo claro/escuro (com preferência salva) =====
+       Usa <html> (document.documentElement) — o mesmo elemento que o script
+       inline no <head> usa, pra evitar inconsistência entre os dois. */
     const btnTema = document.getElementById('btn-tema');
-    const body = document.body;
-    const temaSalvo = localStorage.getItem('portfolio-tema');
+    const raizHtml = document.documentElement;
 
-    if (temaSalvo === 'escuro') {
-        body.setAttribute('data-tema', 'escuro');
+    // O <html> já pode estar em modo escuro (aplicado pelo script inline no <head>);
+    // aqui só ajustamos o texto do botão pra refletir esse estado inicial.
+    if (raizHtml.getAttribute('data-tema') === 'escuro') {
         btnTema.textContent = '☀️ Modo claro';
     }
 
     btnTema.addEventListener('click', () => {
-        const temaAtual = body.getAttribute('data-tema');
+        const temaAtual = raizHtml.getAttribute('data-tema');
         const novoTema = temaAtual === 'escuro' ? 'claro' : 'escuro';
 
-        body.setAttribute('data-tema', novoTema);
+        if (novoTema === 'escuro') {
+            raizHtml.setAttribute('data-tema', 'escuro');
+        } else {
+            raizHtml.removeAttribute('data-tema');
+        }
+
         localStorage.setItem('portfolio-tema', novoTema);
         btnTema.textContent = novoTema === 'escuro' ? '☀️ Modo claro' : '🌙 Modo escuro';
     });
