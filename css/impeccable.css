@@ -1,0 +1,178 @@
+/* Estilos das páginas extra (catálogo Impeccable e registros de aplicação),
+   reaproveitando as variáveis de cor já definidas em style.css */
+
+.rotulo-pagina {
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--clr-primaria-texto);
+    margin-bottom: 8px;
+}
+
+.titulo-pagina {
+    margin-bottom: 20px;
+}
+
+.descricao-pagina {
+    max-width: 760px;
+    color: var(--clr-texto-suave);
+    margin-bottom: var(--espaco-4, 16px);
+}
+
+.descricao-pagina a { color: var(--clr-secundaria); text-decoration: underline; }
+[data-tema="escuro"] .descricao-pagina a { color: var(--clr-primaria); }
+
+.marca-usado { color: var(--clr-verde-salvia-texto, #4F6659); font-weight: 700; }
+
+/* Tabela do catálogo */
+.tabela-scroll {
+    overflow-x: auto;
+    margin-top: var(--espaco-6, 32px);
+    border: 1px solid #E5DDD0;
+    border-radius: 12px;
+}
+
+.tabela-comandos {
+    width: 100%;
+    min-width: 1000px;
+    border-collapse: collapse;
+    background: var(--clr-branco);
+}
+
+.tabela-comandos th {
+    background: var(--clr-fundo);
+    color: var(--clr-secundaria);
+    text-align: left;
+    padding: 14px 16px;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 2px solid #E5DDD0;
+}
+
+.tabela-comandos td {
+    padding: 14px 16px;
+    border-bottom: 1px solid #EFEAE0;
+    font-size: 0.9rem;
+    vertical-align: top;
+}
+
+.tabela-comandos tr:last-child td { border-bottom: none; }
+
+.tabela-comandos code {
+    background: var(--clr-fundo);
+    color: var(--clr-primaria-texto);
+    padding: 2px 8px;
+    border-radius: 6px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.tag-categoria {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.tag-cat-sistematizar { background: #E7ECF3; color: #2E4C73; }
+.tag-cat-criar { background: #E9F2EA; color: #2E5E38; }
+.tag-cat-avaliar { background: #FBEAE6; color: #8A3B25; }
+.tag-cat-refinar { background: #F3E9F5; color: #6B3277; }
+.tag-cat-simplificar { background: #FDF3DC; color: #8A6412; }
+.tag-cat-preparar { background: #E3EFEF; color: #285E5E; }
+
+/* Registros de aplicação */
+.grid-registros {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: var(--espaco-5, 24px);
+    margin-top: var(--espaco-6, 32px);
+}
+
+.card-registro {
+    background: var(--clr-branco);
+    border: 1px solid #E5DDD0;
+    border-radius: 12px;
+    padding: var(--espaco-5, 24px);
+    transition: transform 0.2s ease;
+}
+
+.card-registro:hover { transform: translateY(-4px); }
+
+.card-registro .numero-registro {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--clr-verde-salvia-texto, #4F6659);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.card-registro h3 {
+    font-size: 1.1rem;
+    margin: 6px 0 8px;
+}
+
+.card-registro p {
+    font-size: 0.85rem;
+    color: var(--clr-texto-suave);
+    margin-bottom: 14px;
+}
+
+.card-registro a {
+    color: var(--clr-secundaria);
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+[data-tema="escuro"] .card-registro a { color: var(--clr-primaria); }
+
+/* Página de registro individual */
+.ficha-registro {
+    background: var(--clr-branco);
+    border-radius: 16px;
+    padding: 40px;
+    max-width: 760px;
+    margin: var(--espaco-6, 32px) auto 0;
+}
+
+.bloco-registro { margin-bottom: 28px; }
+.bloco-registro:last-child { margin-bottom: 0; }
+
+.bloco-registro h2 {
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--clr-primaria-texto);
+    border-bottom: 2px solid #EFEAE0;
+    padding-bottom: 8px;
+    margin-bottom: 12px;
+}
+
+.bloco-registro p, .bloco-registro li { color: var(--clr-texto); }
+
+.bloco-registro .prompt-box {
+    background: var(--clr-fundo);
+    border-left: 3px solid var(--clr-primaria-texto);
+    padding: 14px 18px;
+    border-radius: 0 8px 8px 0;
+    font-family: monospace;
+    font-size: 0.85rem;
+    white-space: pre-wrap;
+}
+
+.link-voltar {
+    display: inline-block;
+    margin-top: var(--espaco-6, 32px);
+    color: var(--clr-secundaria);
+    font-weight: 600;
+}
+
+[data-tema="escuro"] .link-voltar { color: var(--clr-primaria); }
+
+@media (max-width: 768px) {
+    .ficha-registro { padding: 24px; }
+}

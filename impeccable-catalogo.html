@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo Impeccable | Taynna Viana Noronha</title>
+    <meta name="description" content="Catálogo dos 23 comandos do Impeccable, usados na correção de design do portfólio.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/impeccable.css">
+</head>
+<body>
+
+    <a href="#conteudo-principal" class="pular-conteudo">Pular para o conteúdo principal</a>
+
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Taynna Noronha</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menuNav">
+                <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Portfólio</a></li>
+                    <li class="nav-item"><a class="nav-link ativo" href="impeccable-catalogo.html">Catálogo Impeccable</a></li>
+                    <li class="nav-item"><a class="nav-link" href="registros/index.html">Registros de Aplicação</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main id="conteudo-principal">
+        <section class="secao" style="padding-top: 120px;">
+            <div class="container">
+                <p class="rotulo-pagina">Atividade — Correção de Design</p>
+                <h1 class="titulo-pagina">Catálogo de Comandos do Impeccable</h1>
+                <p class="descricao-pagina">
+                    O Impeccable é uma ferramenta de orientação de design para agentes de IA, com 23 comandos
+                    organizados em 5 fases (Aprender, Planejar, Avaliar, Aprimorar, Preparar). Documentação
+                    oficial: <a href="https://github.com/pbakaus/impeccable" target="_blank" rel="noopener">github.com/pbakaus/impeccable</a>
+                    e <a href="https://impeccable.style" target="_blank" rel="noopener">impeccable.style</a>.
+                </p>
+                <p class="descricao-pagina">
+                    Abaixo, os 23 comandos estudados. Os marcados com <span class="marca-usado">●</span> foram
+                    efetivamente aplicados na correção deste portfólio (ver <a href="registros/index.html">Registros de Aplicação</a>).
+                </p>
+
+                <div class="tabela-scroll">
+                <table class="tabela-comandos">
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Categoria</th>
+                            <th>Finalidade</th>
+                            <th>Momento de uso</th>
+                            <th>Exemplo</th>
+                            <th>Riscos</th>
+                            <th>Evidência</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                <tr>
+                    <td><code>init</code> <span class="marca-usado" title="Aplicado neste projeto">●</span></td>
+                    <td><span class="tag-categoria tag-cat-sistematizar">Sistematizar</span></td>
+                    <td>Estabelecer o contexto de design do projeto antes de qualquer edição (público, tom de voz, cores, tipografia, referências a evitar).</td>
+                    <td>No início de um projeto novo, ou ao retomar um projeto sem documentação de design.</td>
+                    <td>Definir, para o portfólio, que o público é recrutadores e colegas de curso, tom profissional-acessível, cores terracota/verde-sálvia.</td>
+                    <td>Se as respostas dadas forem genéricas, os comandos seguintes herdam contexto vago e produzem sugestões pouco específicas.</td>
+                    <td>Conferir se o documento gerado contém decisões concretas (não frases genéricas como "público: todo mundo").</td>
+                </tr>
+                <tr>
+                    <td><code>document</code> <span class="marca-usado" title="Aplicado neste projeto">●</span></td>
+                    <td><span class="tag-categoria tag-cat-sistematizar">Sistematizar</span></td>
+                    <td>Gerar um documento de design a partir do código já existente, formalizando os tokens (cores, fontes, espaçamentos) realmente em uso.</td>
+                    <td>Em projetos que já têm código, mas nunca tiveram documentação de design formal.</td>
+                    <td>Extrair as cores do :root do CSS do portfólio e formalizar como paleta oficial documentada.</td>
+                    <td>Documentar inconsistências existentes como se fossem "o padrão" perpetua problemas em vez de corrigi-los.</td>
+                    <td>Comparar o documento gerado com o CSS real — os valores devem bater exatamente.</td>
+                </tr>
+                <tr>
+                    <td><code>extract</code> <span class="marca-usado" title="Aplicado neste projeto">●</span></td>
+                    <td><span class="tag-categoria tag-cat-sistematizar">Sistematizar</span></td>
+                    <td>Extrair padrões repetidos no código (cards, botões, badges) e tokens de espaçamento/cor para um sistema reutilizável.</td>
+                    <td>Quando o mesmo padrão visual aparece em várias partes do código com pequenas variações.</td>
+                    <td>Extrair os valores de espaçamento soltos em pixel (4px, 8px, 12px...) para variáveis nomeadas (--espaco-1, --espaco-2...).</td>
+                    <td>Extrair componentes cedo demais, antes de o padrão realmente se repetir 3+ vezes, cria abstração desnecessária.</td>
+                    <td>Contar quantos valores distintos existiam antes vs. depois da extração.</td>
+                </tr>
+                <tr>
+                    <td><code>shape</code> <span class="marca-usado" title="Aplicado neste projeto">●</span></td>
+                    <td><span class="tag-categoria tag-cat-criar">Criar</span></td>
+                    <td>Planejar a estrutura de UX/UI de uma nova seção ou funcionalidade antes de escrever qualquer código.</td>
+                    <td>Antes de criar uma seção nova, ou antes de redesenhar uma seção com problema estrutural.</td>
+                    <td>Planejar como reorganizar a seção "Hobbies" (que tinha só 1 card sozinho) antes de mexer no HTML.</td>
+                    <td>Pular esta etapa e ir direto pro código tende a produzir soluções superficiais que não resolvem a causa do problema.</td>
+                    <td>Existe um plano/esboço registrado antes da implementação, não só o resultado final.</td>
+                </tr>
+                <tr>
+                    <td><code>craft</code></td>
+                    <td><span class="tag-categoria tag-cat-criar">Criar</span></td>
+                    <td>Fluxo completo de planejar, construir e iterar visualmente para uma funcionalidade nova, do zero ao pronto.</td>
+                    <td>Ao construir uma seção ou página inteira nova, não só um ajuste pontual.</td>
+                    <td>Montar a seção "Projetos" com filtro por tecnologia, do esboço até o código funcional.</td>
+                    <td>Usar craft para ajustes pequenos é desperdício de esforço — vale mais para blocos de trabalho maiores.</td>
+                    <td>O resultado final corresponde ao plano inicial e passa por iteração visual antes de ser considerado pronto.</td>
+                </tr>
+                <tr>
+                    <td><code>critique</code> <span class="marca-usado" title="Aplicado neste projeto">●</span></td>
+                    <td><span class="tag-categoria tag-cat-avaliar">Avaliar</span></td>
+                    <td>Revisão de UX focada em hierarquia visual, clareza da mensagem e impacto emocional da interface.</td>
+                    <td>Depois que uma seção está funcionalmente pronta, antes de polir detalhes técnicos.</td>
+                    <td>Revisar a seção Hero e identificar que o subtítulo tinha contraste baixo, prejudicando a primeira impressão.</td>
+                    <td>Confundir opinião pessoal de estilo com problema real de usabilidade gera mudanças desnecessárias.</td>
+                    <td>Cada problema listado deve ser algo que um usuário real notaria, não uma preferência estética do avaliador.</td>
+                </tr>
+                <tr>
+                    <td><code>audit</code> <span class="marca-usado" title="Aplicado neste projeto">●</span></td>
+                    <td><span class="tag-categoria tag-cat-avaliar">Avaliar</span></td>
+                    <td>Checagem técnica objetiva: acessibilidade (a11y), performance e responsividade.</td>
+                    <td>Antes de publicar qualquer página, e sempre que uma mudança grande for feita.</td>
+                    <td>Rodar o audit no portfólio e encontrar 3 pares de cor com contraste abaixo de 4.5:1, zero estilos de foco, e um @import bloqueante.</td>
+                    <td>Corrigir só o que a ferramenta acusa, sem entender a causa, pode mascarar o sintoma sem resolver o problema.</td>
+                    <td>Métricas objetivas e repetíveis (razão de contraste calculada, contagem de regras :focus, tempo de carregamento).</td>
+                </tr>
+                <tr>
+                    <td><code>polish</code> <span class="marca-usado" title="Aplicado neste projeto">●</span></td>
+                    <td><span class="tag-categoria tag-cat-preparar">Preparar</span></td>
+                    <td>Passada final de acabamento, alinhamento com o sistema de design, e prontidão para publicar.</td>
+                    <td>Como último passo antes de considerar uma página pronta para produção.</td>
+                    <td>No polish final do portfólio, corrigir o flash de tema errado ao carregar a página.</td>
+                    <td>Fazer polish antes de resolver problemas estruturais (de critique/audit) é gastar tempo em detalhe que pode ser refeito depois.</td>
+                    <td>A página não deve ter nenhum problema pendente das etapas de avaliação anteriores.</td>
+                </tr>
+                <tr>
+                    <td><code>bolder</code></td>
+                    <td><span class="tag-categoria tag-cat-refinar">Refinar</span></td>
+                    <td>Amplificar um design que está sem graça ou tímido demais, aumentando contraste visual e presença.</td>
+                    <td>Quando o critique aponta que a interface "não chama atenção" ou "parece genérica".</td>
+                    <td>Aumentar o peso da tipografia do título principal de um hero muito neutro.</td>
+                    <td>Exagerar na amplificação pode tornar a interface cansativa ou pouco profissional em contextos institucionais.</td>
+                    <td>Comparar prints antes/depois: o elemento principal deve se destacar mais, sem parecer "gritado".</td>
+                </tr>
+                <tr>
+                    <td><code>quieter</code> <span class="marca-usado" title="Aplicado neste projeto">●</span></td>
+                    <td><span class="tag-categoria tag-cat-simplificar">Simplificar</span></td>
+                    <td>Reduzir o volume visual de um design que está exagerado, chamativo ou ruidoso demais.</td>
+                    <td>Quando um elemento secundário compete visualmente com o conteúdo principal.</td>
+                    <td>Suavizar o badge "Plano futuro" do portfólio, que estava preenchido e em caixa alta — chamativo demais para um aviso secundário.</td>
+                    <td>Suavizar demais pode fazer elementos importantes (como avisos de erro) perderem visibilidade.</td>
+                    <td>O elemento ainda é perceptível e legível, só não domina mais a atenção do olhar.</td>
+                </tr>
+                <tr>
+                    <td><code>distill</code> <span class="marca-usado" title="Aplicado neste projeto">●</span></td>
+                    <td><span class="tag-categoria tag-cat-simplificar">Simplificar</span></td>
+                    <td>Remover complexidade acumulada — simplificar código, reduzir o número de variações e valores soltos.</td>
+                    <td>Quando o CSS/HTML acumulou muitos valores únicos sem padrão (cores, espaçamentos, variações de componente).</td>
+                    <td>Reduzir os mais de 15 valores soltos de espaçamento em pixel do portfólio para uma escala de 8 tokens nomeados.</td>
+                    <td>Simplificar demais pode forçar componentes visualmente distintos a parecerem iguais, perdendo nuance necessária.</td>
+                    <td>Contar valores distintos antes/depois; o número deve cair sem quebrar nenhum layout.</td>
+                </tr>
+                <tr>
+                    <td><code>harden</code> <span class="marca-usado" title="Aplicado neste projeto">●</span></td>
+                    <td><span class="tag-categoria tag-cat-preparar">Preparar</span></td>
+                    <td>Cobrir casos extremos: tratamento de erro, textos muito longos, internacionalização, uso por teclado/leitor de tela.</td>
+                    <td>Antes de publicar, especialmente em formulários e navegação.</td>
+                    <td>Adicionar foco visível em todos os elementos interativos e um link "pular para o conteúdo" no portfólio.</td>
+                    <td>Endurecer demais uma interface simples (tratamento de erro para casos que nunca vão ocorrer) pode ser esforço desperdiçado.</td>
+                    <td>Navegar pela página só com Tab/Shift+Tab e conferir se todo elemento interativo é alcançável e visível.</td>
+                </tr>
+                <tr>
+                    <td><code>onboard</code></td>
+                    <td><span class="tag-categoria tag-cat-preparar">Preparar</span></td>
+                    <td>Desenhar o fluxo de primeiro uso: telas vazias, primeira visita, caminhos de ativação.</td>
+                    <td>Em produtos com estado (ex: um dashboard sem dados ainda) — pouco aplicável a um portfólio estático.</td>
+                    <td>Definir o que aparece num painel administrativo antes de qualquer conteúdo ser cadastrado.</td>
+                    <td>Aplicar onboarding a interfaces sem estado real (como um portfólio) é usar a ferramenta errada para o contexto.</td>
+                    <td>Testar a aplicação "zerada" e confirmar que a tela vazia orienta o usuário, em vez de parecer quebrada.</td>
+                </tr>
+                <tr>
+                    <td><code>animate</code></td>
+                    <td><span class="tag-categoria tag-cat-refinar">Refinar</span></td>
+                    <td>Adicionar movimento com propósito (transições, microinterações) que reforcem a hierarquia, sem virar distração.</td>
+                    <td>Quando uma interação (clique, hover, troca de estado) acontece sem nenhum feedback visual de transição.</td>
+                    <td>Transição suave ao trocar de tema claro/escuro, em vez de a cor mudar bruscamente.</td>
+                    <td>Easing tipo "bounce"/elástico ou animações longas demais parecem datadas e atrasam a percepção de velocidade.</td>
+                    <td>A transição deve durar entre 150-300ms e ter uma curva de easing suave (ease/ease-out), não bounce.</td>
+                </tr>
+                <tr>
+                    <td><code>colorize</code> <span class="marca-usado" title="Aplicado neste projeto">●</span></td>
+                    <td><span class="tag-categoria tag-cat-refinar">Refinar</span></td>
+                    <td>Introduzir ou ajustar o uso estratégico de cor — inclusive corrigindo problemas de contraste.</td>
+                    <td>Quando o audit encontra cores com contraste insuficiente, ou a paleta está sem hierarquia clara.</td>
+                    <td>Criar uma variante mais escura da cor primária (só para uso em texto) depois que o audit encontrou contraste de 2.44:1.</td>
+                    <td>Adicionar cor sem critério (como um gradiente roxo-azul genérico) é exatamente o tipo de "cara de IA" que a ferramenta tenta evitar.</td>
+                    <td>Recalcular a razão de contraste (WCAG) da cor nova sobre o fundo real onde ela é usada — deve passar de 4.5:1.</td>
+                </tr>
+                <tr>
+                    <td><code>typeset</code> <span class="marca-usado" title="Aplicado neste projeto">●</span></td>
+                    <td><span class="tag-categoria tag-cat-refinar">Refinar</span></td>
+                    <td>Corrigir escolhas de fonte, hierarquia de tamanhos e peso tipográfico.</td>
+                    <td>Quando títulos e corpo de texto não têm diferenciação clara, ou usam fontes genéricas demais.</td>
+                    <td>Reforçar o peso e a cor do subtítulo do hero para garantir que ele se destaque do texto de corpo abaixo.</td>
+                    <td>Usar fontes decorativas demais em textos longos prejudica a legibilidade.</td>
+                    <td>A escala de tamanhos deve ter passos perceptíveis (ex: 0.9rem / 1rem / 1.2rem / 2rem), não valores quase iguais.</td>
+                </tr>
+                <tr>
+                    <td><code>layout</code> <span class="marca-usado" title="Aplicado neste projeto">●</span></td>
+                    <td><span class="tag-categoria tag-cat-refinar">Refinar</span></td>
+                    <td>Corrigir problemas de espaçamento, alinhamento e ritmo visual entre seções.</td>
+                    <td>Quando uma seção parece vazia ou desequilibrada comparada às vizinhas.</td>
+                    <td>Combinar as seções Hobbies e Viagens (cada uma com só 1 card) numa seção só, lado a lado.</td>
+                    <td>Compactar demais seções distintas pode confundir o usuário sobre onde um assunto termina e outro começa.</td>
+                    <td>Comparar visualmente a "densidade" da seção com as seções vizinhas — não deve destoar muito.</td>
+                </tr>
+                <tr>
+                    <td><code>delight</code></td>
+                    <td><span class="tag-categoria tag-cat-refinar">Refinar</span></td>
+                    <td>Adicionar pequenos momentos de encantamento — detalhes que tornam a experiência mais humana.</td>
+                    <td>Depois que o funcional já está sólido, como refinamento final, não prioridade inicial.</td>
+                    <td>Um emoji ou frase descontraída na seção de hobbies, para dar um toque mais pessoal ao portfólio.</td>
+                    <td>Excesso de "fofura" pode soar pouco profissional em contextos institucionais/corporativos.</td>
+                    <td>Pedir feedback de alguém de fora: o detalhe deve gerar um sorriso, não dúvida sobre a seriedade do site.</td>
+                </tr>
+                <tr>
+                    <td><code>overdrive</code></td>
+                    <td><span class="tag-categoria tag-cat-refinar">Refinar</span></td>
+                    <td>Adicionar efeitos tecnicamente sofisticados (parallax, shaders, animações complexas) para um projeto de destaque.</td>
+                    <td>Em peças de showcase/destaque, raramente em interfaces utilitárias do dia a dia.</td>
+                    <td>Um efeito de parallax na seção hero de uma landing page de produto — não necessariamente num portfólio simples.</td>
+                    <td>Efeitos pesados prejudicam performance e podem quebrar em dispositivos mais fracos — o oposto do que audit/optimize buscam.</td>
+                    <td>Medir o impacto no tempo de carregamento e na taxa de quadros (FPS) antes/depois de adicionar o efeito.</td>
+                </tr>
+                <tr>
+                    <td><code>clarify</code></td>
+                    <td><span class="tag-categoria tag-cat-refinar">Refinar</span></td>
+                    <td>Melhorar textos de interface pouco claros — rótulos de botão, mensagens de erro, textos vazios.</td>
+                    <td>Quando um rótulo é ambíguo, ou uma mensagem de erro não explica o que fazer.</td>
+                    <td>Trocar uma mensagem de erro genérica de formulário por uma que diga exatamente qual campo está errado e por quê.</td>
+                    <td>Textos "espertos" demais podem confundir mais do que um texto direto e simples.</td>
+                    <td>Pedir para alguém que nunca viu a tela tentar usá-la só lendo os textos — deve entender o que fazer sem ajuda.</td>
+                </tr>
+                <tr>
+                    <td><code>adapt</code></td>
+                    <td><span class="tag-categoria tag-cat-preparar">Preparar</span></td>
+                    <td>Garantir que a interface funcione bem em diferentes dispositivos e tamanhos de tela.</td>
+                    <td>Depois que o layout desktop está pronto, antes de considerar a página finalizada.</td>
+                    <td>Testar o portfólio num celular real (não só redimensionando a janela) e conferir os pontos de quebra do grid.</td>
+                    <td>Testar só num emulador de navegador pode não capturar bugs reais de dispositivos físicos.</td>
+                    <td>Testar em pelo menos 3 larguras diferentes e confirmar que nada quebra ou tem rolagem horizontal.</td>
+                </tr>
+                <tr>
+                    <td><code>optimize</code> <span class="marca-usado" title="Aplicado neste projeto">●</span></td>
+                    <td><span class="tag-categoria tag-cat-preparar">Preparar</span></td>
+                    <td>Melhorias de performance — tempo de carregamento, tamanho de arquivo, forma de carregar recursos externos.</td>
+                    <td>Quando o audit aponta recursos que bloqueiam a renderização, ou o carregamento está lento.</td>
+                    <td>Trocar o @import de fonte no CSS por <link rel="preconnect"> no HTML, carregando a fonte mais cedo e em paralelo.</td>
+                    <td>Otimizar prematuramente, sem medir o impacto real, pode complicar o código por um ganho insignificante.</td>
+                    <td>Medir o tempo até a fonte carregar (ou o Largest Contentful Paint) antes/depois da mudança.</td>
+                </tr>
+                <tr>
+                    <td><code>live</code> <span class="marca-usado" title="Aplicado neste projeto">●</span></td>
+                    <td><span class="tag-categoria tag-cat-refinar">Refinar</span></td>
+                    <td>Modo de iteração visual: testar variações de um elemento diretamente no navegador, em tempo real, antes de fixar o código final.</td>
+                    <td>Ao decidir entre duas ou mais opções visuais onde é difícil escolher só olhando o código.</td>
+                    <td>Ajustar ao vivo o tom da cor do subtítulo do hero até achar um valor que passasse no contraste AA sem perder a identidade visual.</td>
+                    <td>Iterar visualmente sem depois formalizar a decisão escolhida no código/documentação faz a mudança se perder.</td>
+                    <td>A decisão final tomada no modo live deve estar refletida no código commitado, não só na sessão do navegador.</td>
+                </tr>
+                    </tbody>
+                </table>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Taynna Viana Noronha. Portfólio desenvolvido em HTML, CSS e JavaScript.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

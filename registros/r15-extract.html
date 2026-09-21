@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R15 — extract | Registros de Aplicação</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/impeccable.css">
+</head>
+<body>
+
+    <a href="#conteudo-principal" class="pular-conteudo">Pular para o conteúdo principal</a>
+
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">Taynna Noronha</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menuNav">
+                <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Portfólio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../impeccable-catalogo.html">Catálogo Impeccable</a></li>
+                    <li class="nav-item"><a class="nav-link ativo" href="index.html">Registros de Aplicação</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main id="conteudo-principal">
+        <section class="secao" style="padding-top: 120px;">
+            <div class="container">
+                <p class="rotulo-pagina">R15 · Registro de Aplicação</p>
+                <h1 class="titulo-pagina"><code>extract</code></h1>
+                <p class="descricao-pagina"><span class="tag-categoria tag-cat-sistematizar">Sistematizar</span> &nbsp; Página/seção alvo: <strong>Sistema de espaçamento e cor (nível de projeto)</strong></p>
+
+                <div class="ficha-registro">
+                    <div class="bloco-registro">
+                        <h2>Problema observado</h2>
+                        <p>A escala de espaçamento criada no distill (R09) existia só como variáveis soltas no :root, sem nenhum registro de quando usar cada uma — o próximo trecho de CSS corria o risco de voltar a usar valores soltos.</p>
+                    </div>
+                    <div class="bloco-registro">
+                        <h2>Hipótese de melhoria</h2>
+                        <p>Documentar formalmente a escala como parte do sistema de design do projeto tornaria mais fácil reutilizá-la em páginas futuras, como as próprias páginas desta atividade.</p>
+                    </div>
+                    <div class="bloco-registro">
+                        <h2>Comando escolhido</h2>
+                        <p><code>/impeccable extract</code></p>
+                    </div>
+                    <div class="bloco-registro">
+                        <h2>Prompt / orientação complementar</h2>
+                        <div class="prompt-box">Atue como o comando /impeccable extract. Pegue a escala de espaçamento (--espaco-1 a --espaco-8) e os tokens de cor de texto criados no colorize, e formalize-os como o sistema de design reutilizável do projeto, documentando quando usar cada valor.</div>
+                    </div>
+                    <div class="bloco-registro">
+                        <h2>Resultado produzido</h2>
+                        <p>Os tokens de espaçamento e as variáveis de texto (--clr-primaria-texto, --clr-verde-salvia-texto) foram reaproveitados diretamente na criação das páginas novas desta atividade (catálogo Impeccable e registros de aplicação) — as páginas novas não precisaram inventar nenhum valor de espaçamento ou cor novo, confirmando que a extração funcionou.</p>
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-between mt-4" style="max-width: 760px; margin-left:auto; margin-right:auto;">
+                    <a href="r14-live.html" class="link-voltar">&larr; Anterior</a>
+                    <a href="index.html" class="link-voltar">Todos os registros</a>
+                    <a href="r01-init.html" class="link-voltar">Próximo &rarr;</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Taynna Viana Noronha. Portfólio desenvolvido em HTML, CSS e JavaScript.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
