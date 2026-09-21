@@ -1,4 +1,4 @@
-# Portfólio Pessoal — Taynna Viana Noronha
+# Portfólio Pessoal — Taynná Viana Noronha
 
 Portfólio pessoal desenvolvido para a disciplina de Desenvolvimento Full Stack. Este repositório contém duas etapas:
 
@@ -6,7 +6,7 @@ Portfólio pessoal desenvolvido para a disciplina de Desenvolvimento Full Stack.
 - **Correção de Design com Impeccable** — diagnóstico e melhorias aplicadas sobre o v1, produzindo o `v2` (branch `v2`, também mesclado na `main`).
 
 ## Aluna
-- **Nome:** Taynna Viana Noronha
+- **Nome:** Taynná Viana Noronha
 - **Curso:** Análise e Desenvolvimento de Sistemas — IFSP Guarulhos
 
 ## Tecnologias utilizadas

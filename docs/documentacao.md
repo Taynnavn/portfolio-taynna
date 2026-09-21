@@ -2,7 +2,7 @@
 
 ## 1. Definição do projeto
 
-**Nome do projeto:** Portfólio Pessoal — Taynna Viana Noronha
+**Nome do projeto:** Portfólio Pessoal — Taynná Viana Noronha
 
 **Problema ou necessidade atendida:** Não existe, hoje, um lugar único que reúna minha formação, competências técnicas, projetos e experiência profissional de forma clara para quem eu queira mostrar meu trabalho (recrutadores, colegas de curso, professores).
 
